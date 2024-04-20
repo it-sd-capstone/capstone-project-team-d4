@@ -1,11 +1,17 @@
-// This is the JS file named, script.js for the project
+const images = [
+    "dice1.jpg",
+    "dice2.jpg",
+    "dice3.jpg",
+    "dice4.jpg"
+];
 
-console.log("Hello " + name + "! From the js file!");
+let index = 0;
 
-document.write("Hello from the js file");
+function imageRollover() {
+    const imageElement = document.getElementById("rollover-img");
+    imageElement.src = images[index];
+    index = (index + 1) % images.length;
+}
 
-const canvas = document.getElementById("canvas");
-const ctx = canvas.getContext("2d");
+setInterval(imageRollover, 2000);
 
-ctx.fillStyle = "blue";
-ctx.fillRect(10, 10, 150, 100);
