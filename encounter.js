@@ -32,7 +32,7 @@ function showOption(option) {
 
 function selectOption(option) {
     const nextTextNodeId = option.nextText;
-    state = Object.assign(state, option.setState);
+    state = Object.assign(state, option.nextState);
     showTextNode(nextTextNodeId);
 }
 // TODO: have the text node elements pull data from a JSON file
