@@ -1,27 +1,60 @@
 <!DOCTYPE html>
 <html>
+
 <head>
   <meta charset="UTF-8" />
   <title>title</title>
 </head>
+
 <body>
+
+  the dices work with rng with each one only <br>
+
+  trying to work out how to do more than one of each dice<br>
+
+  trying to work out how to do a combination of dices at once.
+
+  switchcase? <br>
+
+  readability and clean up code, too cluttered.
+
+  <p>This is our dice roller page! </p>
+  <canvas id="canvas"></canvas>
+
   
-<p>This is our dice roller page! </p>
-<canvas id="canvas"></canvas>
+  <h1>custom dice combination</h1>
+  <h3>Select how much dices you want to roll at once.<br>
+    Next select which dices you want to roll.</h2>
+  <input type="number" id="inputDice" placeholder="Number of dices">
+  <input type="number" id="inputDice" placeholder="type of dices">
 
-<h1>6 sided dice</h1>
-    <button id="rollButton6">Roll Dice</button>
-    <p id="result"></p>
+  <h1>4 sided dice</h1>
+  <button id="rollButton4">Roll Dice</button>
+  <p id="result4"></p>
 
-    <h1>8 sided dice</h1>
-    <button id="rollButton8">Roll Dice</button>
-    <p id="result8"></p>
+  <h1>6 sided dice</h1>
+  <button id="rollButton6">Roll Dice</button>
+  <p id="result6"></p>
+
+  <h1>8 sided dice</h1>
+  <button id="rollButton8">Roll Dice</button>
+  <p id="result8"></p>
+
+  <h1>10 sided dice</h1>
+  <button id="rollButton10">Roll Dice</button>
+  <p id="result10"></p>
+
+  <h1>12 sided dice</h1>
+  <button id="rollButton12">Roll Dice</button>
+  <p id="result12"></p>
+
+  <h1>20 sided dice</h1>
+  <button id="rollButton20">Roll Dice</button>
+  <p id="result20"></p>
 
 
-<script src="diceroller.js"></script>
-
-
-
+  <script src="diceroller.js"></script>
 
 </body>
+
 </html>
