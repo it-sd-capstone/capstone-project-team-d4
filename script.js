@@ -1,27 +1,27 @@
 const diceImages = [
-    "dice1.jpg",
-    "dice2.jpg",
-    "dice3.jpg",
-    "dice4.jpg"
+    "images/dice1.jpg",
+    "images/dice2.jpg",
+    "images/dice3.jpg",
+    "images/dice4.jpg"
 ];
 
 const characterImages = [
-    "character1.jpg",
-    "character2.jpg",
-    "character3.jpg",
-    "character4.jpg"
+    "images/character1.jpg",
+    "images/character2.jpg",
+    "images/character3.jpg",
+    "images/character4.jpg"
 ];
 const encounterImages = [
-    "encounter1.jpg",
-    "encounter2.jpg",
-    "encounter3.jpg",
-    "encounter4.jpg"
+    "images/encounter1.jpg",
+    "images/encounter2.jpg",
+    "images/encounter3.jpg",
+    "images/encounter4.jpg"
 ];
 const rulesImages = [
-    "rules1.jpg",
-    "rules2.jpg",
-    "rules3.jpg",
-    "rules4.jpg"
+    "images/rules1.jpg",
+    "images/rules2.jpg",
+    "images/rules3.jpg",
+    "images/rules4.jpg"
 ];
 
 let index1 = 0;
@@ -51,8 +51,4 @@ function rulesRollover() {
     index4 = (index4 + 1) % rulesImages.length;
 }
 
-setInterval(diceRollover, 2000);
-setInterval(characterRollover, 2000);
-setInterval(encounterRollover, 2000);
-setInterval(rulesRollover, 2000);
 

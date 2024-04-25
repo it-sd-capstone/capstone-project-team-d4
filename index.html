@@ -4,6 +4,15 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Dungeons & Dragons Beginners Page</title>
+  <style>
+    #dice-rollover-img,
+    #character-rollover-img,
+    #encounter-rollover-img,
+    #rules-rollover-img {
+      width: 200px;
+      height: 150px;
+    }
+  </style>
 </head>
 <body>
   <h2>Dungeons & Dragons Beginners Page</h2>
@@ -14,16 +23,16 @@
     <a href="characterCreator.html">Character Creator</a>
   </div>
   <div id="dice-rollover-container">
-    <img id="dice-rollover-img"src="dice1.jpg" alt="Dice Rollover Image">
+    <img id="dice-rollover-img"src="images/dice1.jpg" alt="Dice Rollover Image" onmouseover="diceRollover()">
   </div>
   <div id="character-rollover-container">
-    <img id="character-rollover-img"src="character1.jpg" alt="Character Rollover Image">
+    <img id="character-rollover-img"src="images/character1.jpg" alt="Character Rollover Image" onmouseover="characterRollover()">
   </div>
   <div id="encounter-rollover-container">
-    <img id="encounter-rollover-img"src="encounter1.jpg" alt="Encounter Rollover Image">
+    <img id="encounter-rollover-img"src="images/encounter1.jpg" alt="Encounter Rollover Image" onmouseover="encounterRollover()">
   </div>
   <div id="rules-rollover-container">
-    <img id="rules-rollover-img"src="rules1.jpg" alt="Rules Rollover Image">
+    <img id="rules-rollover-img"src="images/rules1.jpg" alt="Rules Rollover Image" onmouseover="rulesRollover()">
   </div>
   
 
