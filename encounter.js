@@ -1,11 +1,19 @@
 const textElement = document.getElementById('text');
 const optionButtonElement = document.getElementById('option-buttons');
 
+
 let state = {}
+let textNodes;
 
 function startGame() {
     state = {}
-    showTextNode(1)
+    fetch('textNodes.json')
+    .then(response => response.json())
+    .then(data => {
+        textNodes = data;
+        showTextNode(1);
+    })
+    .catch(error => console.error('Error fetching JSON:', error));
 }
 
 function showTextNode(textNodeIndex) {
@@ -27,8 +35,13 @@ function showTextNode(textNodeIndex) {
 }
 
 function showOption(option) {
-    return option.requiredState == null || option.requiredState(state);
+    if (option.requiredState === null) {
+        return true;
+    } else {
+        return state[option.requiredState];
+    }
 }
+
 
 function selectOption(option) {
     const nextTextNodeId = option.nextText;
@@ -36,37 +49,9 @@ function selectOption(option) {
     showTextNode(nextTextNodeId);
 }
 // TODO: have the text node elements pull data from a JSON file
-const textNodes = [
-    {
-        id: 1,
-        text: 'Please select option 1.',
-        options: [
-            {
-            text: 'Option 1',
-            nextState: { O1: true },
-            nextText: 2
-            },
-            {
-                text: 'Option 2',
-                nextText: 2
-            }
-        ]
-    },
-    {
-        id: 2,
-        text: 'Did you select option 1?',
-        options: [
-            {
-                text: 'Yes',
-                requiredState: (currentState) => currentState.O1,
-                nextText: 3
-            },
-            {
-                text: 'No',
-                nextText: 3
-            }
-        ]
-    }
-] 
+
+
+
+
 
 startGame();
