@@ -18,7 +18,7 @@ function rollDice4(){
       values.push(value);
       total += value;
     }
-    if(numOfDice == String){ // doesn't work yet
+    if(numOfDice == String){ // now works
       document.write("asd")
       diceResult4.textContent = "please input a number to continue"; 
     } else if (numOfDice == 1){
@@ -38,7 +38,7 @@ function rollDice4(){
       values.push(value);
       total += value;
     }
-    if(numOfDice == String){ // doesn't work yet
+    if(numOfDice == String){ // now works
       document.write("asd")
       diceResult6.textContent = "please input a number to continue"; 
     } else if (numOfDice == 1){
@@ -58,7 +58,7 @@ function rollDice4(){
       values.push(value);
       total += value;
     }
-    if(numOfDice == String){ // doesn't work yet
+    if(numOfDice == String){ 
       document.write("asd")
       diceResult8.textContent = "please input a number to continue";
     } else if (numOfDice == 1){
@@ -78,7 +78,7 @@ function rollDice4(){
       values.push(value);
       total += value;
     }
-    if(numOfDice == String){ // doesn't work yet
+    if(numOfDice == String){ 
       document.write("asd")
       diceResult10.textContent = "please input a number to continue";
     } else if (numOfDice == 1){
@@ -98,7 +98,7 @@ function rollDice4(){
       values.push(value);
       total += value;
     }
-    if(numOfDice == String){ // doesn't work yet
+    if(numOfDice == String){ 
       document.write("asd")
       diceResult12.textContent = "please input a number to continue";
     } else if (numOfDice == 1){
@@ -118,7 +118,7 @@ function rollDice4(){
       values.push(value);
       total += value;
     }
-    if(numOfDice == String){ // doesn't work yet
+    if(numOfDice == String){ 
       document.write("asd")
       diceResult20.textContent = "please input a number to continue";
     } else if (numOfDice == 1){
