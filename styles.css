@@ -1,0 +1,83 @@
+#dice-rollover-img,
+#character-rollover-img,
+#encounter-rollover-img,
+#rules-rollover-img {
+    width: 200px;
+    height: 150px;
+}
+
+#dice-rollover-container,
+#character-rollover-container,
+#encounter-rollover-container,
+#rules-rollover-container {
+    margin-bottom: 20px;
+}
+
+body {
+    background-color: #222;
+    color: #fff;
+    font-family: Arial, sans-serif;
+}
+
+a {
+    color: #fff;
+    text-decoration: none;
+}
+
+a:hover {
+    color: #ccc;
+}
+
+#navBar {
+    background-color: #333;
+    padding: 10px;
+    margin-bottom: 20px;
+}
+
+#navBar a {
+    margin-right: 10px;
+}
+
+h2 {
+    color: #fff;
+}
+
+footer {
+    background-color: #333;
+    color: #ccc;
+    padding: 10px;
+    text-align: center;
+}
+
+img {
+    max-width: 100%;
+}
+
+#container {
+    margin-bottom: 20px;
+}
+
+input[type="text"],
+input[type="number"] {
+    background-color: #444;
+    color: #fff;
+    border: 1px solid #666;
+    padding: 5px;
+    margin-bottom: 10px;
+}
+
+input[type="text"]:read-only {
+    background-color: #333;
+}
+
+button {
+    background-color: #666;
+    color: #fff;
+    border: none;
+    padding: 5px 10px;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: #888;
+}
