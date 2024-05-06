@@ -31,8 +31,7 @@ function rollDice4(){
       values.push(value);
       total += value;
     }
-    if(numOfDice == isNaN || numOfDice <= 0){ // doesn't work yet
-      diceResult4.textContent = "please input a valid number greater than 0"; 
+
     } else if (numOfDice == 1){
       diceResult4.textContent = "Die: " + values + " Total: " + total;
     } else {
@@ -51,8 +50,7 @@ function rollDice4(){
       values.push(value);
       total += value;
     }
-    if(numOfDice == isNaN || numOfDice <= 0){ // doesn't work yet
-      diceResult6.textContent = "please input a valid number greater than 0"; 
+
     } else if (numOfDice == 1){
         diceResult6.textContent = "Die: " + values + " Total: " + total;
     } else {
@@ -70,8 +68,7 @@ function rollDice4(){
       values.push(value);
       total += value;
     }
-    if(numOfDice == isNaN || numOfDice <= 0){ // doesn't work yet
-      diceResult8.textContent = "please input a valid number greater than 0"; 
+
     } else if (numOfDice == 1){
         diceResult8.textContent = "Die: " + values + " Total: " + total;
     } else {
@@ -89,8 +86,7 @@ function rollDice4(){
       values.push(value);
       total += value;
     }
-    if(numOfDice == isNaN || numOfDice <= 0){ // doesn't work yet
-      diceResult10.textContent = "please input a valid number greater than 0"; 
+
     } else if (numOfDice == 1){
         diceResult10.textContent = "Die: " + values + " Total: " + total;
     } else {
@@ -108,8 +104,7 @@ function rollDice4(){
       values.push(value);
       total += value;
     }
-    if(numOfDice == isNaN || numOfDice <= 0){ // doesn't work yet
-      diceResult12.textContent = "please input a valid number greater than 0"; 
+
     } else if (numOfDice == 1){
       diceResult12.textContent = "Die: " + values + " Total: " + total;
     } else {
@@ -127,8 +122,7 @@ function rollDice4(){
       values.push(value);
       total += value;
     }
-    if(numOfDice == isNaN || numOfDice <= 0){ // doesn't work yet
-      diceResult20.textContent = "please input a valid number greater than 0"; 
+
     } else if (numOfDice == 1){
         diceResult20.textContent = "Die: " + values + " Total: " + total;
     } else {
