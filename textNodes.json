@@ -12,7 +12,7 @@
     },
     {
         "id": 2,
-        "text": "You are Bob, a level 1 [class]. You have [stats] and [inventory].",
+        "text": "You are Bob, a level 1 human fighter. \n You have [stats]. \n You have a handaxe, a shield, and 100 gold.",
         "options": [
             {
                 "text": "Next",
@@ -39,19 +39,257 @@
             {
                 "text": "Bargain with him (Persuasion check)",
                 "nextText": 5,
-                "requiredState": null
+                "requiredState": null,
+                "skillCheck": {
+                    "threshold": 8,
+                    "successNextText": 6,
+                    "failureNextText": 7
+                }
             },
             {
                 "text": "Intimidate him (Intimidation check)",
                 "nextText": 5,
-                "requiredState": null
+                "requiredState": null,
+                "skillCheck": {
+                    "threshold": 15,
+                    "successNextText": 8,
+                    "failureNextText": 9
+                }
             },
             {
                 "text": "Trick him into a ploy (Deception check)",
                 "nextText": 5,
+                "requiredState": null,
+                "skillCheck": {
+                    "threshold": 10,
+                    "successNextText": 10,
+                    "failureNextText": 11
+                }
+            }
+        ]
+    },
+    {
+        "id": 5,
+        "text": "The goblin reacts to your action.",
+        "options": [
+            {
+                "text": "Next",
+                "nextText": 8,
+                "requiredState": null
+            }
+        ]
+    },
+    {
+        "id": 6,
+        "text": "You rolled a [roll]. Persuasion check was successful!",
+        "options": [
+            {
+                "text": "Next",
+                "nextText": 12,
+                "requiredState": null
+            }
+        ]
+    },
+    {
+        "id": 7,
+        "text": "You rolled a [roll]. Persuasion check failed!",
+        "options": [
+            {
+                "text": "Next",
+                "nextText": 21,
+                "requiredState": null
+            }
+        ]
+    },
+    {
+        "id": 8,
+        "text": "You rolled a [roll]. Intimidation check was successful!",
+        "options": [
+            {
+                "text": "Next",
+                "nextText": 8,
+                "requiredState": null
+            }
+        ]
+    },
+    {
+        "id": 9,
+        "text": "You rolled a [roll]. Intimidation check failed!",
+        "options": [
+            {
+                "text": "Next",
+                "nextText": 8,
+                "requiredState": null
+            }
+        ]
+    },
+    {
+        "id": 10,
+        "text": "You rolled a [roll]. Deception check was successful!",
+        "options": [
+            {
+                "text": "Next",
+                "nextText": 8,
+                "requiredState": null
+            }
+        ]
+    },
+    {
+        "id": 11,
+        "text": "You rolled a [roll]. Deception check failed!",
+        "options": [
+            {
+                "text": "Next",
+                "nextText": 8,
+                "requiredState": null
+            }
+        ]
+    },
+    {
+        "id": 8,
+        "text": "The encounter concludes.",
+        "options": []
+    },
+    {
+        "id": 12,
+        "text": "You relax your stance a bit. It's obvious to you that this goblin is a little uneasy doing this highway robbery, so perhaps you two could reach a compromise.\n \"Now hold on, noone needs to get hurt over some gold pieces\" you begin, \"but I need this gold to buy food for my party in the town up ahead. They're counting on me.\"",
+        "options": [
+            {
+                "text": "Next",
+                "nextText": 13,
+                "requiredState": null
+            }
+        ]
+    },
+    {
+        "id": 13,
+        "text": "\"I doubt I'll be spending all the gold today though. I think I could spare you 25gp.\"\n The goblin stops for a moment to consider your offer. \"Hmmmmm.. 35gp and you got yer deal.\"",
+        "options": [
+            {
+                "text": "Accept offer",
+                "nextText": 14,
+                "requiredState": null
+            },
+            {
+                "text": "Decline offer (Persuasion check)",
+                "nextText": 8,
+                "requiredState": null,
+                "skillCheck": {
+                    "threshold": 12,
+                    "successNextText": 16,
+                    "failureNextText": 17
+                }
+            }
+        ]
+    },
+    {
+        "id": 14,
+        "text": "You decide not to push your luck. Going to bed with a full stomach sounds great, but not getting stabbed sounds even better.\n \"Fine, one moment if you would.\" You open up your pouch and openly count out 35gp before dropping the count into the goblins cuped palm.\n \"Ehehehe, pleasure doin business with yeh.\" The goblin chuckled as he disappeared into the thick vegetation from which he had so suddenly appeared.",
+        "options": [
+            {
+                "text": "Next",
+                "nextText": 15,
+                "requiredState": null
+            }
+        ]
+    },
+    {
+        "id": 15,
+        "text": "You sigh, loosing 35% of your funds before you had even made it into town wasn't ideal, but you still had some gold left, as well as all your blood. You continue on your path, a little more aware of your surroundings this time...",
+        "options": [
+            {
+                "text": "Next",
+                "nextText": 15,
+                "requiredState": null
+            }
+        ]
+    },
+    {
+        "id": 16,
+        "text": "You rolled a [roll]. Persuasion check was successful!",
+        "options": [
+            {
+                "text": "Next",
+                "nextText": 19,
+                "requiredState": null
+            }
+        ]
+    },
+    {
+        "id": 17,
+        "text": "You rolled a [roll]. Persuasion check failed!",
+        "options": [
+            {
+                "text": "Next",
+                "nextText": 18,
+                "requiredState": null
+            }
+        ]
+    },
+    {
+        "id": 18,
+        "text": "You decide to stand firm with your original offer. \"Sorry, but 25gp is my only offer. Like I said, I have others counting on me.\" \nThe goblin's face twisted in frustration. \"Well...\" he started after a few moments \"... it's a shame we couldn't come to an agreement.\" He quickly composes himself before assuming a combat stance. It seems that combat is inevitable...",
+        "options": [
+            {
+                "text": "Next",
+                "nextText": 100,
+                "requiredState": null
+            }
+        ]
+    },
+    {
+        "id": 19,
+        "text": "You decide to stand firm with your original offer. \"Sorry, but 25gp is my only offer. Like I said, I have others counting on me.\" \nThe goblin's face twisted in frustration. \"Grrrrr fine!\" He exclaimed after a few moments \"25gp. No less.\" \nYou open up your pouch and openly count out 25gp before dropping the count into the goblin's cuped palm.\n \"Yer lucky you caught me on a good day.\" He grumbles as he disappears into the thick vegetation from which he had so suddenly appeared.",
+        "options": [
+            {
+                "text": "Next",
+                "nextText": 20,
+                "requiredState": null
+            }
+        ]
+    },
+    {
+        "id": 20,
+        "text": "You continue towards your destination. Despite loosing a fourth of your wealth, you can't help but feel proud of the fact you talked a thief out of robbing you blind by simply explaining your situation.\n Despite your pride, you are certainly more aware of your surroundings now...",
+        "options": [
+            {
+                "text": "Next",
+                "nextText": 20,
+                "requiredState": null
+            }
+        ]
+    },
+    {
+        "id": 21,
+        "text": "You relax your stance a bit. It's obvious to you that this goblin is a little uneasy doing this highway robbery, so perhaps you two could reach a compromise.\n \"Now hold on, noone needs to get hurt over some gold pieces\" you begin, \"but I-\"",
+        "options": [
+            {
+                "text": "Next",
+                "nextText": 22,
+                "requiredState": null
+            }
+        ]
+    },
+    {
+        "id": 22,
+        "text": "\"Yer right about that,\" the goblin cuts in, \"so drop yer gold pouch!\" He assumes an aggressive stance. It seems that combat is inevitable...",
+        "options": [
+            {
+                "text": "Next",
+                "nextText": 100,
+                "requiredState": null
+            }
+        ]
+    },
+    {
+        "id": 100,
+        "text": "Combat start node",
+        "options": [
+            {
+                "text": "Next",
+                "nextText": 100,
                 "requiredState": null
             }
         ]
     }
 ]
-
