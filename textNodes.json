@@ -1,0 +1,57 @@
+[
+    {
+        "id": 1,
+        "text": "This is a sample encounter demonstrating how a basic encounter in D&D might work.",
+        "options": [
+            {
+                "text": "Next",
+                "nextText": 2,
+                "requiredState": null
+            }
+        ]
+    },
+    {
+        "id": 2,
+        "text": "You are Bob, a level 1 [class]. You have [stats] and [inventory].",
+        "options": [
+            {
+                "text": "Next",
+                "nextText": 3,
+                "requiredState": null
+            }
+        ]
+    },
+    {
+        "id": 3,
+        "text": "Your party currently resides in a small village half a mile back. You've been tasked to go get food from a town a few miles up the road.",
+        "options": [
+            {
+                "text": "Next",
+                "nextText": 4,
+                "requiredState": null
+            }
+        ]
+    },
+    {
+        "id": 4,
+        "text": "Suddenly, a small figure darts in front of your path, startling you slightly. It's a goblin, a rather small one. A brown, disheveled robe covered most of his body. \"Gimme all yer gold, or you'll be sorry!\" He threatens while somewhat shakily pointing a dagger at you. The dagger appears to be made out of some sort of sharpened bone.",
+        "options": [
+            {
+                "text": "Bargain with him (Persuasion check)",
+                "nextText": 5,
+                "requiredState": null
+            },
+            {
+                "text": "Intimidate him (Intimidation check)",
+                "nextText": 5,
+                "requiredState": null
+            },
+            {
+                "text": "Trick him into a ploy (Deception check)",
+                "nextText": 5,
+                "requiredState": null
+            }
+        ]
+    }
+]
+
