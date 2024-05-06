@@ -3,7 +3,8 @@
 
 <head>
   <meta charset="UTF-8" />
-  <title>title</title>
+  <title>Dice Roller</title>
+  <link rel="stylesheet" type="text/css" href="styles.css">
 </head>
 
 <body>
@@ -15,65 +16,21 @@
   </div>
 
   <p><h1>Welcome to the Dice roller page! </h1></p>
-  <canvas id="canvas"></canvas>
+  <div class="container">
+    <div class="dice" id="dice">
+      <div class="number"></div>
+    </div>
+    <div class="controls">
+      <label for="sides">Number of Sides:</label>
+      <input type="number" id="sides" min="2" value="6">
+      <label for="rolls">Number of Rolls:</label>
+      <input type="number" id="rolls" min="1" value="1">
+      <button onclick="rollDice()">Roll Dice</button>
+    </div>
+    <div id="result"></div>
+  </div>
+
   
-  <div id = "container">
-    <h1>D4 Roller </h1>
-    <label> Number of Die/Dices:</label>
-    <input type="number" id="numOfDice4" value="1" min="1">
-    <button onclick="rollDice4()">Roll Dice</button>
-    <div id="diceResult4"></div>
-  </div>
-
-  <div id = "container">
-    <h1>D6 Roller </h1>
-    <label> Number of Die/Dices:</label>
-    <input type="number" id="numOfDice6" value="1" min="1">
-    <button onclick="rollDice6()">Roll Dice</button>
-    <div id="diceResult6"></div>
-  </div>
-
-  <div id = "container">
-    <h1>D8 Roller </h1>
-    <label> Number of Die/Dices:</label>
-    <input type="number" id="numOfDice8" value="1" min="1">
-    <button onclick="rollDice8()">Roll Dice</button>
-    <div id="diceResult8"></div>
-  </div>
-
-  <div id = "container">
-    <h1>D10 Roller </h1>
-    <label> Number of Die/Dices:</label>
-    <input type="number" id="numOfDice10" value="1" min="1">
-    <button onclick="rollDice10()">Roll Dice</button>
-    <div id="diceResult10"></div>
-  </div>
-  
-  <div id = "container">
-    <h1>D12 Roller </h1>
-    <label> Number of Die/Dices:</label>
-    <input type="number" id="numOfDice12" value="1" min="1">
-    <button onclick="rollDice12()">Roll Dice</button>
-    <div id="diceResult12"></div>
-  </div>
-
-  <div id = "container">
-    <h1>D20 Roller </h1>
-    <label> Number of Die/Dices:</label>
-    <input type="number" id="numOfDice20" value="1" min="1">
-    <button onclick="rollDice20()">Roll Dice</button>
-    <div id="diceResult20"></div>
-  </div>
-
-  <div id = "container">
-    <h1>Custom Dice Roller </h1>
-    <label> Number of Dices:</label>
-    <input type="number" id="numOfDiceCustom" value="1" min="1">
-    <button onclick="customRoll()">Roll Dice</button>
-    <div id="diceResultCustom"></div>
-  </div>
-
-
   <script src="diceroller.js"></script>
 
 </body>
