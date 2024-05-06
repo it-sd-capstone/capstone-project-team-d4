@@ -22,6 +22,8 @@
 
   <div class="StatBlock">
     <H3>Roll your characters stats here!</H3>
+    <button onclick="rollStats()">GenerateStats</button>
+
     <h2 class="Strength">Strength</h2>
     <input type="text" name="readonlyField" id="strengthField" value="" readonly><br>
 
@@ -40,9 +42,113 @@
     <h2 class="Charisma">Charisma</h2>
     <input type="text" name="readonlyField" id="charismaField" value="" readonly><br>
 
-    <button onclick="rollStats()">GenerateStats</button>
+   
+    
+  </div>
+  <br>
+  <div id="savesAndSkills">
+    <h3>D&D Attributes and Skills</h3>
+    <p>When asked to make a Skill check reference this table. Add or subtract the modifier value on the right side to your roll.</p>
+    <table>
+        <tr>
+            <th>Attribute</th>
+            <th>Skill</th>
+            <th>Modifier</th>
+        </tr>
+        <tr>
+            <td>Strength</td>
+            <td>Athletics</td>
+            <td><input type="number" id="athletics" readonly></td>
+        </tr>
+        <tr>
+            <td rowspan="3">Dexterity</td>
+            <td>Acrobatics</td>
+            <td><input type="number" id="acrobatics" readonly></td>
+        </tr>
+        <tr>
+            <td>Sleight of Hand</td>
+            <td><input type="number" id="sleightOfHand" readonly></td>
+        </tr>
+        <tr>
+            <td>Stealth</td>
+            <td><input type="number" id="stealth" readonly></td>
+        </tr>
+        <tr>
+            <td rowspan="5">Intelligence</td>
+            <td>Arcana</td>
+            <td><input type="number" id="arcana" readonly></td>
+        </tr>
+        <tr>
+            <td>History</td>
+            <td><input type="number" id="history" readonly></td>
+        </tr>
+        <tr>
+            <td>Investigation</td>
+            <td><input type="number" id="investigation" readonly></td>
+        </tr>
+        <tr>
+            <td>Nature</td>
+            <td><input type="number" id="nature" readonly></td>
+        </tr>
+        <tr>
+            <td>Religion</td>
+            <td><input type="number" id="religion" readonly></td>
+        </tr>
+        <tr>
+            <td rowspan="5">Wisdom</td>
+            <td>Animal Handling</td>
+            <td><input type="number" id="animalHandling" readonly></td>
+        </tr>
+        <tr>
+            <td>Insight</td>
+            <td><input type="number" id="insight" readonly></td>
+        </tr>
+        <tr>
+            <td>Medicine</td>
+            <td><input type="number" id="medicine" readonly></td>
+        </tr>
+        <tr>
+            <td>Perception</td>
+            <td><input type="number" id="perception" readonly></td>
+        </tr>
+        <tr>
+            <td>Survival</td>
+            <td><input type="number" id="survival" readonly></td>
+        </tr>
+        <tr>
+            <td rowspan="4">Charisma</td>
+            <td>Deception</td>
+            <td><input type="number" id="deception" readonly></td>
+        </tr>
+        <tr>
+            <td>Intimidation</td>
+            <td><input type="number" id="intimidation" readonly></td>
+        </tr>
+        <tr>
+            <td>Performance</td>
+            <td><input type="number" id="performance" readonly></td>
+        </tr>
+        <tr>
+            <td>Persuasion</td>
+            <td><input type="number" id="persuasion" readonly></td>
+        </tr>
+    </table>
   </div>
 
+
+  <br>
+  <div class="boxes" id="boxArea">
+    <h2>Type your Backstory Here!</h2>
+    <textarea id="backStory"></textarea>
+
+    <h2>Your Skills</h2>
+    <textarea id="skills"></textarea>
+
+    <h2>Keep track of your inventory here</h2>
+    <textarea id="invnetory"></textarea>
+
+  </div>
+    
 
   
 
