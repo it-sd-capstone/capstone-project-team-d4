@@ -44,11 +44,37 @@ function showOption(option) {
 
 
 function selectOption(option) {
-    const nextTextNodeId = option.nextText;
-    state = Object.assign(state, option.nextState);
-    showTextNode(nextTextNodeId);
+    if (option.skillCheck) {
+        const roll = Math.floor(Math.random() * 20) + 1; 
+
+        console.log('Roll:', roll);
+
+        const skillCheckPassed = roll >= option.skillCheck.threshold;
+
+        const nextTextNodeId = skillCheckPassed ? option.skillCheck.successNextText : option.skillCheck.failureNextText;
+
+        if (option.skillCheck.updateState) {
+            state = Object.assign(state, option.skillCheck.updateState(skillCheckPassed));
+        }
+
+        const nextTextNode = textNodes.find(node => node.id === nextTextNodeId);
+        
+        let text = nextTextNode.text;
+
+        text = text.replace('[roll]', roll);
+
+        console.log('Modified Text:', text);
+
+        nextTextNode.text = text;
+
+        showTextNode(nextTextNodeId);
+    } else {
+        const nextTextNodeId = option.nextText;
+        state = Object.assign(state, option.nextState);
+        showTextNode(nextTextNodeId);
+    }
 }
-// TODO: have the text node elements pull data from a JSON file
+
 
 
 

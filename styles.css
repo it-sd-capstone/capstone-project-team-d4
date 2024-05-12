@@ -81,6 +81,7 @@ button {
 button:hover {
     background-color: #888;
 }
+<<<<<<< HEAD
   
 #container {
     margin-top: 20px; /* Add space above each container */
@@ -95,3 +96,46 @@ button:hover {
   canvas {
     border: 1px solid black;
   }
+=======
+
+.container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 50px;
+  }
+  
+  .dice {
+    width: 100px;
+    height: 100px;
+    border: 2px solid black;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 2rem;
+    margin-bottom: 20px;
+    position: relative;
+    transition: transform 1s ease;
+  }
+  
+  .number {
+    position: absolute;
+  }
+  
+  .controls {
+    margin-bottom: 20px;
+  }
+  
+  #result {
+    font-size: 1.5rem;
+  }
+  
+  @keyframes roll {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+  }
+  
+  .rolling {
+    animation: roll 1s ease;
+  }
+>>>>>>> dd2a906f97b0d75e5e8cf289097c75d8e24f860b

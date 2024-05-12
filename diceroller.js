@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 // create a custom dice roller for two different dice faces with x number of dice roll for each dice face variation in one roll.
 
 var canvas = document.getElementById('diceCanvas');
@@ -93,25 +94,23 @@ var canvas = document.getElementById('diceCanvas');
 ///////////////////////////////////////////////////////////////
 =======
 // This is the JS file named, script.js for the project
+=======
+function rollDice() {
+  const dice = document.getElementById("dice");
+  const sides = parseInt(document.getElementById("sides").value);
+  const rolls = parseInt(document.getElementById("rolls").value);
+  const resultDiv = document.getElementById("result");
+  resultDiv.innerHTML = "";
+>>>>>>> dd2a906f97b0d75e5e8cf289097c75d8e24f860b
 
-const canvas = document.getElementById("canvas");
-const ctx = canvas.getContext("2d");
-
-
-// create a custom dice roller for two different dice faces with x number of dice roll for each dice face variation in one roll.
-
-
-
-
-
-function testingRollDice(){
-  let digit = document.getElementById("")
-  let numberOfDice = document.getElementById("numOfDice" + digit)
-  for(let i = 0; i < numOfDice; i++){
-    console.log("hi")
+  for (let i = 0; i < rolls; i++) {
+    const rollResult = Math.floor(Math.random() * sides) + 1;
+    resultDiv.innerHTML += `<span>Roll ${i + 1}: ${rollResult}</span><br>`;
+    animateDice(dice, rollResult);
   }
 }
 
+<<<<<<< HEAD
 
 
 
@@ -265,3 +264,12 @@ function customRoll(numOfFirstDie, numOfFacesFirstDie, numOfSecDie, numOfFacesSe
 // dice history
 
 // select how much dice you want to roll on each one
+=======
+function animateDice(dice, rollResult) {
+  dice.classList.add("rolling");
+  setTimeout(() => {
+    dice.querySelector('.number').innerText = rollResult;
+    dice.classList.remove("rolling");
+  }, 1000);
+}
+>>>>>>> dd2a906f97b0d75e5e8cf289097c75d8e24f860b
