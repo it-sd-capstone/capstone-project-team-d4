@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 // create a custom dice roller for two different dice faces with x number of dice roll for each dice face variation in one roll.
 
 var canvas = document.getElementById('diceCanvas');
@@ -90,6 +91,31 @@ var canvas = document.getElementById('diceCanvas');
 
 
 ///////////////////////////////////////////////////////////////
+=======
+// This is the JS file named, script.js for the project
+
+const canvas = document.getElementById("canvas");
+const ctx = canvas.getContext("2d");
+
+
+// create a custom dice roller for two different dice faces with x number of dice roll for each dice face variation in one roll.
+
+
+
+
+
+function testingRollDice(){
+  let digit = document.getElementById("")
+  let numberOfDice = document.getElementById("numOfDice" + digit)
+  for(let i = 0; i < numOfDice; i++){
+    console.log("hi")
+  }
+}
+
+
+
+
+>>>>>>> e5c345aee7bf93667cb89289988d1d842beaefb1
 function rollDice4(){  
     let numOfDice = parseInt(document.getElementById("numOfDice4").value);
     let diceResult4 = document.getElementById("diceResult4");  
@@ -100,15 +126,17 @@ function rollDice4(){
       values.push(value);
       total += value;
     }
-    if(numOfDice == String){ // now works
-      document.write("asd")
-      diceResult4.textContent = "please input a number to continue"; 
+
     } else if (numOfDice == 1){
       diceResult4.textContent = "Die: " + values + " Total: " + total;
     } else {
       diceResult4.textContent = "Dice: " + values + " Total: " + total;
     }
+<<<<<<< HEAD
     return total;
+=======
+    
+>>>>>>> e5c345aee7bf93667cb89289988d1d842beaefb1
   }
 
   function rollDice6(){   
@@ -121,9 +149,7 @@ function rollDice4(){
       values.push(value);
       total += value;
     }
-    if(numOfDice == String){ // now works
-      document.write("asd")
-      diceResult6.textContent = "please input a number to continue"; 
+
     } else if (numOfDice == 1){
         diceResult6.textContent = "Die: " + values + " Total: " + total;
     } else {
@@ -141,9 +167,7 @@ function rollDice4(){
       values.push(value);
       total += value;
     }
-    if(numOfDice == String){ 
-      document.write("asd")
-      diceResult8.textContent = "please input a number to continue";
+
     } else if (numOfDice == 1){
         diceResult8.textContent = "Die: " + values + " Total: " + total;
     } else {
@@ -161,9 +185,7 @@ function rollDice4(){
       values.push(value);
       total += value;
     }
-    if(numOfDice == String){ 
-      document.write("asd")
-      diceResult10.textContent = "please input a number to continue";
+
     } else if (numOfDice == 1){
         diceResult10.textContent = "Die: " + values + " Total: " + total;
     } else {
@@ -181,9 +203,7 @@ function rollDice4(){
       values.push(value);
       total += value;
     }
-    if(numOfDice == String){ 
-      document.write("asd")
-      diceResult12.textContent = "please input a number to continue";
+
     } else if (numOfDice == 1){
       diceResult12.textContent = "Die: " + values + " Total: " + total;
     } else {
@@ -201,9 +221,7 @@ function rollDice4(){
       values.push(value);
       total += value;
     }
-    if(numOfDice == String){ 
-      document.write("asd")
-      diceResult20.textContent = "please input a number to continue";
+
     } else if (numOfDice == 1){
         diceResult20.textContent = "Die: " + values + " Total: " + total;
     } else {
@@ -213,9 +231,20 @@ function rollDice4(){
 
   // not prio rn
 function customRoll(numOfFirstDie, numOfFacesFirstDie, numOfSecDie, numOfFacesSecDie){
+// rest utton 
+// total
+// one roll button
 
+// ds array of dice, stores which dice I want to roll
 
+//let somearray = [4,4,6]
+// new function called rolldice?
+// creates a new 
 }
+
+
+
+
 // function test(numberOfDice, numFaces){
     
 //     //let numberOfDice = document.getElementById("numOfDice").value;
