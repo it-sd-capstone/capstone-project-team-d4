@@ -5,6 +5,8 @@
   <meta charset="UTF-8" />
   <title>Dice Roller</title>
   <link rel="stylesheet" type="text/css" href="styles.css">
+
+  
 </head>
 
 <body>
@@ -16,13 +18,16 @@
   </div>
 
   <p><h1>Welcome to the Dice roller page! </h1></p>
-  <canvas id="canvas"></canvas>
+
   
+  <canvas id="diceCanvas" width="500" height="200"></canvas>
+  <!-- <button onclick="rollDice()">Roll Dice</button> -->
+
   <div id = "container">
     <h1>D4 Roller </h1>
     <label> Number of Die/Dices:</label>
     <input type="number" id="numOfDice4" value="1" min="1">
-    <button onclick="rollDice4()">Roll Dice</button>
+    <button onclick="rollDice4(),rollDice(4)">Roll Dice</button>
     <div id="diceResult4"></div>
   </div>
 
@@ -30,7 +35,7 @@
     <h1>D6 Roller </h1>
     <label> Number of Die/Dices:</label>
     <input type="number" id="numOfDice6" value="1" min="1">
-    <button onclick="rollDice6()">Roll Dice</button>
+    <button onclick="rollDice6(),rollDice(6)">Roll Dice</button>
     <div id="diceResult6"></div>
   </div>
 
@@ -38,7 +43,7 @@
     <h1>D8 Roller </h1>
     <label> Number of Die/Dices:</label>
     <input type="number" id="numOfDice8" value="1" min="1">
-    <button onclick="rollDice8()">Roll Dice</button>
+    <button onclick="rollDice8(),rollDice(8)">Roll Dice</button>
     <div id="diceResult8"></div>
   </div>
 
@@ -46,7 +51,7 @@
     <h1>D10 Roller </h1>
     <label> Number of Die/Dices:</label>
     <input type="number" id="numOfDice10" value="1" min="1">
-    <button onclick="rollDice10()">Roll Dice</button>
+    <button onclick="rollDice10(),rollDice(10)">Roll Dice</button>
     <div id="diceResult10"></div>
   </div>
   
@@ -54,7 +59,7 @@
     <h1>D12 Roller </h1>
     <label> Number of Die/Dices:</label>
     <input type="number" id="numOfDice12" value="1" min="1">
-    <button onclick="rollDice12()">Roll Dice</button>
+    <button onclick="rollDice12(),rollDice(12)">Roll Dice</button>
     <div id="diceResult12"></div>
   </div>
 
@@ -62,7 +67,7 @@
     <h1>D20 Roller </h1>
     <label> Number of Die/Dices:</label>
     <input type="number" id="numOfDice20" value="1" min="1">
-    <button onclick="rollDice20()">Roll Dice</button>
+    <button onclick="rollDice20(),rollDice(20)">Roll Dice</button>
     <div id="diceResult20"></div>
   </div>
 

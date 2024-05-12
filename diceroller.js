@@ -1,15 +1,97 @@
-// This is the JS file named, script.js for the project
-
-const canvas = document.getElementById("canvas");
-const ctx = canvas.getContext("2d");
-
-ctx.fillStyle = "blue";
-ctx.fillRect(10, 10, 150, 100);
-
 // create a custom dice roller for two different dice faces with x number of dice roll for each dice face variation in one roll.
 
+var canvas = document.getElementById('diceCanvas');
+    var ctx = canvas.getContext('2d');
+
+    var diceSize = 100; 
+    var diceX = -diceSize; 
+    var diceY = canvas.height - diceSize - 10; 
+    var rollSpeed = 10; 
+    var bounceHeight = 30; 
+    var bounceSpeed = 0.1; 
+    var currentNumber = 1; 
+
+    // Animation loop
+    function animate() {
+      requestAnimationFrame(animate);
+
+      // Clear canvas
+      ctx.clearRect(0, 0, canvas.width, canvas.height);
+
+      // Draw dice
+      drawDice(diceX, diceY);
+    }
+
+    // Roll and bounce animation
+    function rollAndBounce() {
+      var angle = 0; 
+      var initialY = diceY; 
+
+      // Roll animation loop
+      var rollInterval = setInterval(function() {
+        diceX += rollSpeed;
+        if (diceX >= canvas.width - diceSize) {
+          diceX = canvas.width - diceSize;
+          clearInterval(rollInterval);
+          var bounceInterval = setInterval(function() {
+            angle += bounceSpeed;
+            diceY = initialY - Math.sin(angle) * bounceHeight;
+            if (angle >= Math.PI) {
+              clearInterval(bounceInterval);
+              setTimeout(function() {
+                diceX = -diceSize;
+                diceY = canvas.height - diceSize - 10;
+              }, 1000); 
+            }
+          }, 1000 / 60); 
+        }
+      }, 1000 / 60); 
+    }
+
+    // for loop for each number of dice drawn!!!!!!!!!!!!!!!!!!!!!!!!
+    // Draw dice
+    function drawDice(x, y) {
+      ctx.beginPath();
+      ctx.rect(x, y, diceSize, diceSize);
+      ctx.fillStyle = 'white';
+      ctx.fill();
+      ctx.lineWidth = 2;
+      ctx.strokeStyle = 'black';
+      ctx.stroke();
+
+      // Draw dots
+      ctx.fillStyle = 'black';
+      ctx.font = '20px Arial';
+      ctx.textAlign = 'center';
+      ctx.textBaseline = 'middle';
+      ctx.fillText(currentNumber, x + diceSize / 2, y + diceSize / 2);
+    }
+
+    // Roll dice button click event handler
+    function rollDice(sides) {
+      var numOfDice = parseInt(document.getElementById('numOfDice' + sides).value);
+      var result = [];
+    
+      for (var i = 0; i < numOfDice; i++) {
+        let functionName =  "rollDice" + sides;
+        let rollResult = window[functionName]();
+        result.push(rollResult);
+      }
+    
+      
+      diceX = -diceSize;
+      diceY = canvas.height - diceSize - 10;
+      currentNumber = result[result.length - 1]; 
+      rollAndBounce();
+    }
+
+    // Start animation loop
+    animate();
+
+
+///////////////////////////////////////////////////////////////
 function rollDice4(){  
-    let numOfDice = document.getElementById("numOfDice4").value;
+    let numOfDice = parseInt(document.getElementById("numOfDice4").value);
     let diceResult4 = document.getElementById("diceResult4");  
     let values = []; // stores the values of the dice rolls
     let total = 0;
@@ -26,6 +108,7 @@ function rollDice4(){
     } else {
       diceResult4.textContent = "Dice: " + values + " Total: " + total;
     }
+    return total;
   }
 
   function rollDice6(){   
