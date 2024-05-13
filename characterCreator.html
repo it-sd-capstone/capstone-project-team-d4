@@ -7,48 +7,70 @@
 <body>
   
   <h2 class="nametag">Name</h2>
-  <p>Enter your characters Name:</p>
-  <input type="text" name= "nametag" id="nametag" value=""><br>
-
-
+    <p>Enter your characters Name:</p>
+    <input type="text" name= "nametag" id="nametag" value=""><br>
+  <div id="rollStatsButton">
+    <H3>Roll your characters stats here!</H3>
+    <button onclick="rollStats()">GenerateStats</button>
+  </div>  
   <div id="raceForm" >
     <h4>Select Race</h4>
-  </div>
+  </div>  
   <br>
-  <br>
-  <div id="formContainer">
+  <div id="classForm">
     <h4>Select your class</h2>
   </div>
 
-  <div class="StatBlock">
-    <H3>Roll your characters stats here!</H3>
-    <button onclick="rollStats()">GenerateStats</button>
-
-    <h2 class="Strength">Strength</h2>
-    <input type="text" name="readonlyField" id="strengthField" value="" readonly><br>
-
-    <h2 class="Dexterity">Dexterity</h2>
-    <input type="text" name="readonlyField" id="dexterityField" value="" readonly><br>
-
-    <h2 class="Constitution">Constitution</h2>
-    <input type="text" name="readonlyField" id="constitutionField" value="" readonly><br>
-
-    <h2 class="Intelligence">Intelligence</h2>
-    <input type="text" name="readonlyField" id="intellgenceField" value="" readonly><br>
-
-    <h2 class="Wisdom">Wisdom</h2>
-    <input type="text" name="readonlyField" id="wisdomField" value="" readonly><br>
-
-    <h2 class="Charisma">Charisma</h2>
-    <input type="text" name="readonlyField" id="charismaField" value="" readonly><br>
-
-   
-    
-  </div>
+  
   <br>
   <div id="savesAndSkills">
     <h3>D&D Attributes and Skills</h3>
     <p>When asked to make a Skill check reference this table. Add or subtract the modifier value on the right side to your roll.</p>
+    <table border="1">
+        <thead>
+            <tr>
+                <th>Stat</th>
+                <th>Ability Score</th>
+                <th>Modifier</th>
+                               
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>Strength</td>
+                <td id="strengthFieldTable"></td>
+                <td id="strengthModifier"></td>                
+            </tr>
+            <tr>
+                <td>Dexterity</td>
+                <td id="dexterityFieldTable"></td>
+                <td id="dexterityModifier"></td>              
+            </tr>
+            <tr>
+                <td>Constitution</td>
+                <td id="constitutionFieldTable"></td>
+                <td id="constiutionModifier"></td>
+            </tr>
+            <tr>
+                <td>Intelligence</td>
+                <td id="intelligenceFieldTable"></td>
+                <td id="inntelligenceModifier"></td>
+            </tr>
+            <tr>
+                <td>Wisdom</td>
+                <td id="wisdomFieldTable"></td>
+                <td id="wisdomModifier"></td>               
+            </tr>
+            <tr>
+                <td>Charisma</td>                    
+                <td id="charismaFieldTable"></td>
+                <td id="charismaModifier"></td>
+            </tr>
+        </tbody>
+    </table>
+  </div>        
+    <h3>Skill Checks:</h3>
+    <p>These are some of the common skill checks, we put the modifier for each next to it to give you a helping hand.</p>
     <table>
         <tr>
             <th>Attribute</th>
@@ -139,13 +161,13 @@
   <br>
   <div class="boxes" id="boxArea">
     <h2>Type your Backstory Here!</h2>
-    <textarea id="backStory"></textarea>
+    <textarea id="backStory" style="height: 142px; width: 671px;"></textarea>
 
-    <h2>Your Skills</h2>
-    <textarea id="skills"></textarea>
+    <h2>Here's what your character can do:</h2>
+    <textarea id="skillsField" style="height: 142px; width: 671px;"></textarea>
 
     <h2>Keep track of your inventory here</h2>
-    <textarea id="invnetory"></textarea>
+    <textarea id="invetory" style="height: 142px; width: 671px;"></textarea>
 
   </div>
     
