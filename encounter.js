@@ -1,11 +1,19 @@
 const textElement = document.getElementById('text');
 const optionButtonElement = document.getElementById('option-buttons');
 
+
 let state = {}
+let textNodes;
 
 function startGame() {
     state = {}
-    showTextNode(1)
+    fetch('textNodes.json')
+    .then(response => response.json())
+    .then(data => {
+        textNodes = data;
+        showTextNode(1);
+    })
+    .catch(error => console.error('Error fetching JSON:', error));
 }
 
 function showTextNode(textNodeIndex) {
@@ -27,46 +35,49 @@ function showTextNode(textNodeIndex) {
 }
 
 function showOption(option) {
-    return option.requiredState == null || option.requiredState(state);
+    if (option.requiredState === null) {
+        return true;
+    } else {
+        return state[option.requiredState];
+    }
 }
 
+
 function selectOption(option) {
-    const nextTextNodeId = option.nextText;
-    state = Object.assign(state, option.nextState);
-    showTextNode(nextTextNodeId);
-}
-// TODO: have the text node elements pull data from a JSON file
-const textNodes = [
-    {
-        id: 1,
-        text: 'Please select option 1.',
-        options: [
-            {
-            text: 'Option 1',
-            nextState: { O1: true },
-            nextText: 2
-            },
-            {
-                text: 'Option 2',
-                nextText: 2
-            }
-        ]
-    },
-    {
-        id: 2,
-        text: 'Did you select option 1?',
-        options: [
-            {
-                text: 'Yes',
-                requiredState: (currentState) => currentState.O1,
-                nextText: 3
-            },
-            {
-                text: 'No',
-                nextText: 3
-            }
-        ]
+    if (option.skillCheck) {
+        const roll = Math.floor(Math.random() * 20) + 1; 
+
+        console.log('Roll:', roll);
+
+        const skillCheckPassed = roll >= option.skillCheck.threshold;
+
+        const nextTextNodeId = skillCheckPassed ? option.skillCheck.successNextText : option.skillCheck.failureNextText;
+
+        if (option.skillCheck.updateState) {
+            state = Object.assign(state, option.skillCheck.updateState(skillCheckPassed));
+        }
+
+        const nextTextNode = textNodes.find(node => node.id === nextTextNodeId);
+        
+        let text = nextTextNode.text;
+
+        text = text.replace('[roll]', roll);
+
+        console.log('Modified Text:', text);
+
+        nextTextNode.text = text;
+
+        showTextNode(nextTextNodeId);
+    } else {
+        const nextTextNodeId = option.nextText;
+        state = Object.assign(state, option.nextState);
+        showTextNode(nextTextNodeId);
     }
-] 
+}
+
+
+
+
+
 
 startGame();
