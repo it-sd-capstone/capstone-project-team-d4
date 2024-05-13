@@ -4,6 +4,12 @@ const optionButtonElement = document.getElementById('option-buttons');
 
 let state = {}
 let textNodes;
+var playerHP = 20; 
+var goblinHP = 15; 
+let combatNode;
+var playerDamageText;
+var goblinDamageText;
+
 
 function startGame() {
     state = {}
@@ -44,7 +50,11 @@ function showOption(option) {
 
 
 function selectOption(option) {
-    if (option.skillCheck) {
+    if (option.nextText >= 100){
+        combatNode = option.nextText;
+        startCombat();
+    }
+    if (option.skillCheck && goblinHP > 0 && playerHP > 0) {
         const roll = Math.floor(Math.random() * 20) + 1; 
 
         console.log('Roll:', roll);
@@ -68,13 +78,59 @@ function selectOption(option) {
         nextTextNode.text = text;
 
         showTextNode(nextTextNodeId);
-    } else {
+    } else if(goblinHP > 0 && playerHP > 0) {
         const nextTextNodeId = option.nextText;
         state = Object.assign(state, option.nextState);
         showTextNode(nextTextNodeId);
     }
 }
 
+function startCombat() {
+    
+    if (combatNode === 100){
+        if (playerHP <= 0) {
+            
+            showTextNode(106);
+            return;
+        }
+    }
+
+
+    
+    if (combatNode === 103) {
+        
+        
+        let playerDamage = Math.floor(Math.random() * 6) + 1; 
+        goblinHP -= playerDamage;
+
+        
+        playerDamageText = textNodes.find(node => node.id === 103);
+        playerDamageText.text = playerDamageText.text.replace('[playerDamage]', playerDamage).replace('[goblinHP]', goblinHP);
+        showTextNode(103);
+        goblinDamageText = textNodes.find(node => node.id === 104);
+        goblinDamageText.text = "Goblin deals [goblinDamage] damage to you. Player HP: [playerHP]";
+
+    }
+    else if (combatNode === 104) {
+
+        if (goblinHP <= 0) {
+            
+            showTextNode(105);
+            return;
+        }
+        
+        let goblinDamage = Math.floor(Math.random() * 4) + 1; 
+        playerHP -= goblinDamage;
+
+        
+        goblinDamageText = textNodes.find(node => node.id === 104);
+        goblinDamageText.text = goblinDamageText.text.replace('[goblinDamage]', goblinDamage).replace('[playerHP]', playerHP);
+        showTextNode(104);
+        playerDamageText.text = "Player deals [playerDamage] damage to the goblin. Goblin HP: [goblinHP]";
+
+        
+    }
+}
 
 
 

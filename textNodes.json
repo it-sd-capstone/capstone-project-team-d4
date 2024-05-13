@@ -12,7 +12,7 @@
     },
     {
         "id": 2,
-        "text": "You are Bob, a level 1 human fighter. \n You have [stats]. \n You have a handaxe, a shield, and 100 gold.",
+        "text": "You are Bob, a level 1 human fighter. \n You have a handaxe, a shield, and 100 gold.",
         "options": [
             {
                 "text": "Next",
@@ -51,7 +51,7 @@
                 "nextText": 5,
                 "requiredState": null,
                 "skillCheck": {
-                    "threshold": 15,
+                    "threshold": 13,
                     "successNextText": 8,
                     "failureNextText": 9
                 }
@@ -61,7 +61,7 @@
                 "nextText": 5,
                 "requiredState": null,
                 "skillCheck": {
-                    "threshold": 10,
+                    "threshold": 15,
                     "successNextText": 10,
                     "failureNextText": 11
                 }
@@ -107,7 +107,7 @@
         "options": [
             {
                 "text": "Next",
-                "nextText": 8,
+                "nextText": 50,
                 "requiredState": null
             }
         ]
@@ -118,7 +118,7 @@
         "options": [
             {
                 "text": "Next",
-                "nextText": 8,
+                "nextText": 57,
                 "requiredState": null
             }
         ]
@@ -129,7 +129,7 @@
         "options": [
             {
                 "text": "Next",
-                "nextText": 8,
+                "nextText": 75,
                 "requiredState": null
             }
         ]
@@ -140,7 +140,7 @@
         "options": [
             {
                 "text": "Next",
-                "nextText": 8,
+                "nextText": 85,
                 "requiredState": null
             }
         ]
@@ -197,11 +197,6 @@
         "id": 15,
         "text": "You sigh, loosing 35% of your funds before you had even made it into town wasn't ideal, but you still had some gold left, as well as all your blood. You continue on your path, a little more aware of your surroundings this time...",
         "options": [
-            {
-                "text": "Next",
-                "nextText": 15,
-                "requiredState": null
-            }
         ]
     },
     {
@@ -252,11 +247,6 @@
         "id": 20,
         "text": "You continue towards your destination. Despite loosing a fourth of your wealth, you can't help but feel proud of the fact you talked a thief out of robbing you blind by simply explaining your situation.\n Despite your pride, you are certainly more aware of your surroundings now...",
         "options": [
-            {
-                "text": "Next",
-                "nextText": 20,
-                "requiredState": null
-            }
         ]
     },
     {
@@ -282,8 +272,80 @@
         ]
     },
     {
-        "id": 100,
-        "text": "Combat start node",
+        "id": 50,
+        "text": "It's obvious to you that this goblin is pretty nervous about preforming a hold up like this. You know you could take advantage of this, and you already have a gambit in mind.",
+        "options": [
+            {
+                "text": "Next",
+                "nextText": 51,
+                "requiredState": null
+            }
+        ]
+    },
+    {
+        "id": 51,
+        "text": "You have had gripes with your upbringing. Being the son of two talented magic users meant hours upon hours of reading old tomes and writing research papers on histories most influential wizards, magicians, and the like. Not only did you find it all to be very boring and uninteresting, you found that a lot of what magic could do, ordinary people could do as well. Why conjure a fireball when a flaming arrow would do the trick?",
+        "options": [
+            {
+                "text": "Next",
+                "nextText": 52,
+                "requiredState": null
+            }
+        ]
+    },
+    {
+        "id": 52,
+        "text": "You went adventuring as a fighter to prove that you don't need magic to achieve greatness, to prove that you could get the job done without the spectacle. That same spectacle, however, is what you must rely on now.",
+        "options": [
+            {
+                "text": "Next",
+                "nextText": 53,
+                "requiredState": null
+            }
+        ]
+    },
+    {
+        "id": 53,
+        "text": "You step forward, keeping your eyes locked on the thief. Just before reaching striking distance, you hold your axe out in front of you, muttering a short incantation under your breath...",
+        "options": [
+            {
+                "text": "...",
+                "nextText": 54,
+                "requiredState": null
+            }
+        ]
+    },
+    {
+        "id": 54,
+        "text": "Your axe suddenly bursts into flames, as if you were holding a bonfire on a stick! \"w-w-WHHHHAAAAAA!! Y-YER A DEMON!!!\" the goblin whips around and bolts back into the vegetation from where he first appeared, dropping his dagger in the process.",
+        "options": [
+            {
+                "text": "Next",
+                "nextText": 55,
+                "requiredState": null
+            }
+        ]
+    },
+    {
+        "id": 55,
+        "text": "You stand there for a couple seconds before reflexively dropping the now very hot handle of your hand axe. The charred handle snapps in half when it hits the ground. You sigh in relief, thankful that your bluff worked. Magic isn't good for much, but when it comes to putting on a show, it's unparalleled.",
+        "options": [
+            {
+                "text": "Next",
+                "nextText": 56,
+                "requiredState": null
+            }
+        ]
+    },
+    {
+        "id": 56,
+        "text": "You pick up the dagger the goblin dropped. It's good that you got another weapon considering your previous one is currently a smoldering axe head in a pile of ash. You continue on your path, a little more aware of your surroundings this time...",
+        "options": [
+        ]
+    },
+    {
+        "id": 57,
+        "text": "It's obvious to you that this goblin is pretty nervous about preforming a hold up like this. You know you could take advantage of this, but you don't have an immediate plan. You think for a moment about what to say before you reflexively block a slice from the goblin's dagger with your shield. He has made up his mind before you have. It seems that combat is inevitable...",
         "options": [
             {
                 "text": "Next",
@@ -291,5 +353,174 @@
                 "requiredState": null
             }
         ]
+    },
+    {
+        "id": 75,
+        "text": "The nervous disposition of goblin sticking you up made it obvious that he had to rob you, despite not wanting to. A small grin appears on your face. Maybe you could have a little fun with this.",
+        "options": [
+            {
+                "text": "Next",
+                "nextText": 77,
+                "requiredState": null
+            }
+        ]
+    },
+    {
+        "id": 77,
+        "text": "\"Highway robbery, huh? I can respect the grind as a fellow thief\" you respond to the goblin. \"Eh? You don't look like a theif.\" While it's true you had sticky fingers as a kid, you were a long way from calling yourself a proper theif. That didn't stop you from selling yourself as one. \"All the better I don't look like one, don't you think? Anyway, I think I have an idea that could leave both of us with heavy pockets.\" you show the goblin a mischievous smile \"A two man job...\"",
+        "options": [
+            {
+                "text": "Next",
+                "nextText": 78,
+                "requiredState": null
+            }
+        ]
+    },
+    {
+        "id": 78,
+        "text": "...",
+        "options": [
+            {
+                "text": "...",
+                "nextText": 79,
+                "requiredState": null
+            }
+        ]
+    },
+    {
+        "id": 79,
+        "text": "You're crouched down next to the same goblin that tried to rob you not an hour previous. You are both hidden in a bush close to your party's campsite. \"We're gonna rob these guys? They don't look very rich.\" \"They were boasting about a successful dungeon raid when I passed through, saying they don't need to work a day in their lives because of their haul. They should have their earnings in that tent over there.\"",
+        "options": [
+            {
+                "text": "Next",
+                "nextText": 80,
+                "requiredState": null
+            }
+        ]
+    },
+    {
+        "id": 80,
+        "text": "You're lying through your teeth. most of the wealth your party had was stashed away in your gold pouch. You just needed the goblin to step in the tent, if only for a moment. \"I'll go distract them now, hurry to the tent.\"",
+        "options": [
+            {
+                "text": "Next",
+                "nextText": 81,
+                "requiredState": null
+            }
+        ]
+    },
+    {
+        "id": 81,
+        "text": "Your arrival back at camp so soon caused confusion among the party. You brush off your party's questions until you see the goblin slip into the tent. Perfect.",
+        "options": [
+            {
+                "text": "Next",
+                "nextText": 82,
+                "requiredState": null
+            }
+        ]
+    },
+    {
+        "id": 82,
+        "text": "The mischievous smile returns to your face. \"Actually, I met a friend on my way to town, and I'd like you all to meet him. He's in our tent right now...\"",
+        "options": [
+            {
+                "text": "Next",
+                "nextText": 83,
+                "requiredState": null
+            }
+        ]
+    },
+    {
+        "id": 83,
+        "text": "...",
+        "options": [
+            {
+                "text": "...",
+                "nextText": 84,
+                "requiredState": null
+            }
+        ]
+    },
+    {
+        "id": 84,
+        "text": "The goblin didn't stand a chance while surrounded by your party and trapped in your tent. You feel a little bad that it was so easy to trick him just by promising gold, but that's what he gets for being naïve. You also got 34gp and a cool dagger for your trouble! You continue on your path, a little more aware of your surroundings this time...",
+        "options": [
+        ]
+    },
+    {
+        "id": 85,
+        "text": "\"Wait-\" you begin, \"you're robbing the wrong guy! I only have 20gp on me. However-\" \" I don't care how much you got, whatever it is, it's mine!\" The goblin cuts you off, assuming a combat stance. If the goblin wasn't sure about attacking you before, he sure is now. It seems that combat is inevitable...",
+        "options": [
+            {
+                "text": "Next",
+                "nextText": 100,
+                "requiredState": null
+            }
+        ]
+    },
+    {
+        "id": 100,
+        "text": "Combat rages on...",
+        "options": [
+            {
+                "text": "Attack the goblin!",
+                "nextText": 101,
+                "requiredState": null
+            },
+            {
+                "text": "Run away!",
+                "nextText": 102,
+                "requiredState": null
+            }
+        ]
+    },
+    {
+        "id": 101,
+        "text": "You attack the goblin!",
+        "options": [
+            {
+                "text": "Next",
+                "nextText": 103,
+                "requiredState": null
+            }
+        ]
+    },
+    {
+        "id": 102,
+        "text": "Though its embarrassing, you decide you have to make your escape. As you turn to run away, the goblin's dagger catches your gold pouch and tears it open, spilling most of its contents onto the road. You keep on running despite this. You check your inventory once you've made sufficient distance. Once you do that you continue your way back to camp, you have to explain to your party why you lost 59gp and don't have food...",
+        "options": []
+    },
+    {
+        "id": 103,
+        "text": "Player deals [playerDamage] damage to the goblin. Goblin HP: [goblinHP]",
+        "options": [
+            {
+                "text": "Next",
+                "nextText": 104,
+                "requiredState": null
+            }
+        ]
+    },
+    {
+        "id": 104,
+        "text": "Goblin deals [goblinDamage] damage to you. Player HP: [playerHP]",
+        "options": [
+            {
+                "text": "Next",
+                "nextText": 100,
+                "requiredState": null
+            }
+        ]
+    },
+    {
+        "id": 105,
+        "text": "Your last attack sealed it. \"AIYEEE!\" The goblin whips around and dashes toward the vegetation from where he first appeared. \"You'll pay for this!\" he screeches as he disappears. You didn't want it to come to this, but at least you got out with only a few scratches. You continue on your path, a little more aware of your surroundings this time...",
+        "options": []
+    },
+    {
+        "id": 106,
+        "text": "This goblin is much better at fighting than you first thought. Though its embarrassing, you have to make your escape. As you turn to run away, the goblin's dagger catches your gold pouch and tears it open, spilling most of its contents onto the road. You keep on running despite this. You check your inventory once you've made sufficient distance. Once you do that you continue your way back to camp, you have to explain to your party why you lost 73gp and don't have food...",
+        "options": []
     }
 ]
